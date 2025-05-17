@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import BASE_URL from '../config';
+import axios from "axios";
 
 function Registration() {
 
@@ -34,7 +35,7 @@ function Registration() {
     try {
        const response = await axios.post(api, formData);
        console.log(response.data);
-       alert(response.data); 
+       alert(response.data);
     } catch (error) {
         console.log(error);
     }
