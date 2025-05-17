@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const ProRoute = require("./Routes/ProRoute");
 
 
 app.use(cors());
@@ -20,7 +21,7 @@ mongoose.connect(process.env.CONNECTION_STRING).then(()=>{
 
 
 
-
+app.use("/Product", ProRoute);
 
 
 
