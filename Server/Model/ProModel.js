@@ -4,7 +4,7 @@ const ProSchema = new mongoose.Schema({
     brand:String,
     price:String,
     defaultImage:String,
-    Image:[String]
+    image:[String]
 })
 
 module.exports = mongoose.model("Product", ProSchema);

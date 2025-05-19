@@ -3,7 +3,7 @@ const ProModel = require("../Model/ProModel");
 
 const InsertProducts = async(req,res)=>{
     const { name,brand,price} = req.body;
-    const ImageUrl = req.files.map(()=>files.path);
+    const ImageUrl = req.files.map(file=>file.path);
     try {
         const Product = await ProModel.create({
             name:name, 
