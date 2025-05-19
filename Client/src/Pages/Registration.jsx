@@ -35,7 +35,7 @@ function Registration() {
     try {
        const response = await axios.post(api, formData);
        console.log(response.data);
-       alert(response.data);
+       alert(response.data.msg);
     } catch (error) {
         console.log(error);
     }

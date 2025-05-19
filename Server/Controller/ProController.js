@@ -10,7 +10,7 @@ const InsertProducts = async(req,res)=>{
             brand:brand,
             price:price,
             defaultImage:ImageUrl[0],
-            Image:ImageUrl
+            image:ImageUrl
 
         })
         res.status(200).send({msg:"Your Product is Succefully Inserted"});
