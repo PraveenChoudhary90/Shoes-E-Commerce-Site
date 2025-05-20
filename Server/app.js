@@ -4,7 +4,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const path = require('path')
 const ProRoute = require("./Routes/ProRoute");
+
 
 
 app.use(cors());
@@ -14,6 +16,8 @@ app.use(bodyParser.json());
 // Parse incoming requests with urlencoded payloads
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 mongoose.connect(process.env.CONNECTION_STRING).then(()=>{
     console.log("DB IS CONNECTED")

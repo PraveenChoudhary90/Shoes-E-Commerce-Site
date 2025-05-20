@@ -20,8 +20,14 @@ const InsertProducts = async(req,res)=>{
 }
 
 
+const DisplayData = async(req,res)=>{
+    const Data = await ProModel.find();
+    res.send(Data);
+}
+
 
 
 module.exports = {
-    InsertProducts
+    InsertProducts,
+    DisplayData
 }

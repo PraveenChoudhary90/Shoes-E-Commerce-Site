@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
   }) // 'myFile' is the name attribute of the file input field
 
 route.post("/InsertProduct",upload.array("image", 10),ProController.InsertProducts);
+route.get("/DisplayData", ProController.DisplayData);
 
 
 
